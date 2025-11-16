@@ -3,6 +3,11 @@
 
 # Instalación y Configuración de Snort en Debian
 
+<p align="center">
+  <img src="https://www.snort.org/assets/Snort_fulllogo.png" width="240" valign="middle" style="margin-right: 20px;">
+  <img src="https://www.debian.org/logos/openlogo-nd.svg" width="150" valign="middle">
+</p>
+
 A continuación, se escriben los pasos para instalar el Sistema de Detección de Intrusos (IDS) **Snort** en **Debian 12.5 (Bookworm)** y configurar una regla para detectar detectar paquetes ICMP (ping).
 
 
@@ -265,3 +270,7 @@ sudo snort -A console -q -c /etc/snort/snort.conf -i enp5s0
 >**-i enp5s0** Interfaz de red que Snort va a monitorear.
 
 Al momento de hacer un ping desde otra computadora, Snort mostró el mensaje en consola "PING DETECTADO", junto con la IP origen, confirmando el resultado esperado de esta prueba, Snort está monitoreando correctamente la interfaz Ethernet `enp5s0`; la regla personalizada en `local.rules` está siendo cargada; el IDS detecta paquetes ICMP según lo configurado; el tráfico coincide con la condición de la regla y las alertas se muestran correctamente en consola.
+
+
+Autor: Jorge Dionisio Velazquez
+Fecha: 16/11/2025
